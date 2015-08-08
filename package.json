@@ -1,0 +1,65 @@
+{
+	"name": "string.prototype.trim",
+	"version": "0.0.0",
+	"author": "Jordan Harband",
+	"description": "ES5 spec-compliant shim for String.prototype.trim",
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm run lint && npm run test:shimmed && npm run test:module && npm run security",
+		"test:shimmed": "node test/shimmed.js",
+		"test:module": "node test/index.js",
+		"coverage": "covert test/*.js",
+		"coverage-quiet": "covert test/*.js --quiet",
+		"lint": "npm run jscs && npm run eslint",
+		"eslint": "eslint test/*.js *.js",
+		"jscs": "jscs test/*.js *.js",
+		"security": "nsp package"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/es-shims/String.prototype.trim.git"
+	},
+	"keywords": [
+		"String.prototype.trim",
+		"string",
+		"ES5",
+		"shim",
+		"trim",
+		"polyfill"
+	],
+	"dependencies": {
+		"define-properties": "^1.1.1",
+		"es-abstract": "^1.2.2",
+		"function-bind": "^1.0.2"
+	},
+	"devDependencies": {
+		"tape": "^4.0.3",
+		"covert": "^1.1.0",
+		"jscs": "^2.0.0",
+		"nsp": "^1.0.3",
+		"eslint": "^1.1.0",
+		"@ljharb/eslint-config": "^1.0.4"
+	},
+	"testling": {
+		"files": "test/index.js",
+		"browsers": [
+			"iexplore/9.0..latest",
+			"firefox/4.0..6.0",
+			"firefox/15.0..latest",
+			"firefox/nightly",
+			"chrome/4.0..10.0",
+			"chrome/20.0..latest",
+			"chrome/canary",
+			"opera/11.6..latest",
+			"opera/next",
+			"safari/5.0..latest",
+			"ipad/6.0..latest",
+			"iphone/6.0..latest",
+			"android-browser/4.2"
+		]
+	},
+	"engines": {
+		"node": ">= 0.4"
+	}
+}
