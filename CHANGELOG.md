@@ -1,3 +1,7 @@
+1.1.1 / 2015-08-16
+=================
+  * [Docs] remove "if" around `.shim` call in example
+
 1.1.0 / 2015-08-16
 =================
   * [New] Implement the [es-shim API](es-shims/api).
