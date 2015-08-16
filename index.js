@@ -3,19 +3,16 @@
 var bind = require('function-bind');
 var define = require('define-properties');
 
-var trim = require('./implementation');
+var implementation = require('./implementation');
+var getPolyfill = require('./polyfill');
+var shim = require('./shim');
 
-var boundTrim = bind.call(Function.call, trim);
+var boundTrim = bind.call(Function.call, implementation);
+
 define(boundTrim, {
-	shim: function shimTrim() {
-		var zeroWidthSpace = '\u200b';
-		define(String.prototype, { trim: trim }, {
-			trim: function () {
-				return zeroWidthSpace.trim() !== zeroWidthSpace;
-			}
-		});
-		return String.prototype.trim;
-	}
+	getPolyfill: getPolyfill,
+	implementation: implementation,
+	shim: shim
 });
 
 module.exports = boundTrim;

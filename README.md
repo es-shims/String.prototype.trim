@@ -12,6 +12,8 @@ String.prototype.trim <sup>[![Version Badge][npm-version-svg]][package-url]</sup
 
 An ES5 spec-compliant `String.prototype.trim` shim. Invoke its "shim" method to shim `String.prototype.trim` if it is unavailable.
 
+This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec](http://www.ecma-international.org/ecma-262/5.1/#sec-15.5.4.20).
+
 Most common usage:
 ```js
 var trim = require('string.prototype.trim');
