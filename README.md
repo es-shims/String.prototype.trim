@@ -20,12 +20,13 @@ var trim = require('string.prototype.trim');
 
 assert(trim(' \t\na \t\n') === 'a');
 
-if (!String.prototype.trim) {
-	trim.shim();
-}
+trim.shim(); // will be a no-op if not needed
 
 assert(trim(' \t\na \t\n') === ' \t\na \t\n'.trim());
 ```
+
+## Engine Bugs
+Some implementations of `String#trim` incorrectly trim zero-width spaces. This shim detects and corrects this behavior.
 
 ## Tests
 Simply clone the repo, `npm install`, and run `npm test`
