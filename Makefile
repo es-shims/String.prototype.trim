@@ -2,7 +2,7 @@
 $(if $(findstring /,$(MAKEFILE_LIST)),$(error Please only invoke this makefile from the directory it resides in))
 
 	# The files that need updating when incrementing the version number.
-VERSIONED_FILES := *.js *.json *.map README*
+VERSIONED_FILES := *.js *.json README*
 
 
 # Add the local npm packages' bin folder to the PATH, so that `make` can find them, when invoked directly.
@@ -34,15 +34,15 @@ ifndef TAG
 	$(error Please invoke with `make TAG=<new-version> release`, where <new-version> is either an increment specifier (patch, minor, major, prepatch, preminor, premajor, prerelease), or an explicit major.minor.patch version number)
 endif
 
-CHANGELOG_ERROR = $(error No CHANGES specified)
+CHANGELOG_ERROR = $(error No CHANGELOG specified)
 .PHONY: _ensure-changelog
 _ensure-changelog:
-	@ (git status -sb --porcelain | command grep -E '^( M|[MA] ) CHANGES' > /dev/null) || (echo no CHANGES specified && exit 2)
+	@ (git status -sb --porcelain | command grep -E '^( M|[MA] ) CHANGELOG.md' > /dev/null) || (echo no CHANGELOG.md specified && exit 2)
 
 # Ensures that the git workspace is clean.
 .PHONY: _ensure-clean
 _ensure-clean:
-	@[ -z "$$((git status --porcelain --untracked-files=no || echo err) | command grep -v 'CHANGES')" ] || { echo "Workspace is not clean; please commit changes first." >&2; exit 2; }
+	@[ -z "$$((git status --porcelain --untracked-files=no || echo err) | command grep -v 'CHANGELOG.md')" ] || { echo "Workspace is not clean; please commit changes first." >&2; exit 2; }
 
 # Makes a release; invoke with `make TAG=<versionOrIncrementSpec> release`.
 .PHONY: release
@@ -56,8 +56,6 @@ release: _ensure-tag _ensure-changelog _ensure-clean
 	   new_ver=`semver -i "$$new_ver" "$$old_ver"` || { echo 'Invalid version-increment specifier: $(TAG)' >&2; exit 2; } \
 	 fi; \
 	 printf "=== Bumping version **$$old_ver** to **$$new_ver** before committing and tagging:\n=== TYPE 'proceed' TO PROCEED, anything else to abort: " && read response && [ "$$response" = 'proceed' ] || { echo 'Aborted.' >&2; exit 2; };  \
-     npm run minify; \
-     replace "$$old_ver" "$$new_ver" -- $(VERSIONED_FILES) && \
-     replace "blob/master" "blob/v$$new_ver" -- *.min.js && \
-	 git commit -m "v$$new_ver" $(VERSIONED_FILES) CHANGES && \
+	 replace "$$old_ver" "$$new_ver" -- $(VERSIONED_FILES) && \
+	 git commit -m "v$$new_ver" $(VERSIONED_FILES) CHANGELOG.md && \
 	 git tag -a -m "v$$new_ver" "v$$new_ver"
