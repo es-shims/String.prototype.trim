@@ -15,7 +15,9 @@ An ES5 spec-compliant `String.prototype.trim` shim. Invoke its "shim" method to 
 This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec](http://www.ecma-international.org/ecma-262/5.1/#sec-15.5.4.20).
 
 Most common usage:
+
 ```js
+var assert = require('assert');
 var trim = require('string.prototype.trim');
 
 assert(trim(' \t\na \t\n') === 'a');
