@@ -2,6 +2,7 @@
 
 var trim = require('../');
 var test = require('tape');
+var runTests = require('./tests');
 
 test('as a function', function (t) {
 	t.test('bad array/this value', function (st) {
@@ -10,7 +11,7 @@ test('as a function', function (t) {
 		st.end();
 	});
 
-	require('./tests')(trim, t);
+	runTests(trim, t);
 
 	t.end();
 });
