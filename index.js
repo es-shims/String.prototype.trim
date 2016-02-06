@@ -7,7 +7,7 @@ var implementation = require('./implementation');
 var getPolyfill = require('./polyfill');
 var shim = require('./shim');
 
-var boundTrim = bind.call(Function.call, implementation);
+var boundTrim = bind.call(Function.call, getPolyfill());
 
 define(boundTrim, {
 	getPolyfill: getPolyfill,
