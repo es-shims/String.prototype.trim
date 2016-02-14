@@ -51,11 +51,11 @@
 		"covert": "^1.1.0",
 		"jscs": "^2.9.0",
 		"nsp": "^2.2.0",
-		"eslint": "^1.10.3",
+		"eslint": "^2.0.0",
 		"semver": "^5.1.0",
 		"replace": "^0.3.0",
-		"@ljharb/eslint-config": "^1.6.1",
-		"@es-shims/api": "^1.0.0"
+		"@ljharb/eslint-config": "^2.1.0",
+		"@es-shims/api": "^1.1.0"
 	},
 	"testling": {
 		"files": "test/index.js",
