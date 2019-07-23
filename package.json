@@ -19,14 +19,12 @@
 	"scripts": {
 		"pretest": "npm run --silent lint && es-shim-api --bound",
 		"test": "npm run --silent tests-only",
-		"posttest": "npm run --silent security",
+		"posttest": "npx aud",
 		"tests-only": "npm run --silent test:shimmed && npm run --silent test:module",
 		"test:shimmed": "node test/shimmed.js",
 		"test:module": "node test/index.js",
 		"coverage": "covert test/*.js",
-		"coverage-quiet": "covert test/*.js --quiet",
-		"lint": "eslint .",
-		"security": "nsp check"
+		"lint": "eslint ."
 	},
 	"repository": {
 		"type": "git",
@@ -49,7 +47,6 @@
 	"devDependencies": {
 		"tape": "^4.6.0",
 		"covert": "^1.1.0",
-		"nsp": "^2.5.0",
 		"eslint": "^3.0.1",
 		"semver": "^5.2.0",
 		"replace": "^0.3.0",
