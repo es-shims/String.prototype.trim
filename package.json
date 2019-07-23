@@ -46,12 +46,12 @@
 	},
 	"devDependencies": {
 		"@es-shims/api": "^2.1.2",
-		"@ljharb/eslint-config": "^6.0.0",
-		"covert": "^1.1.0",
-		"eslint": "^3.0.1",
-		"replace": "^0.3.0",
-		"semver": "^5.2.0",
-		"tape": "^4.6.0"
+		"@ljharb/eslint-config": "^13.1.1",
+		"covert": "^1.1.1",
+		"eslint": "^5.16.0",
+		"replace": "^1.1.0",
+		"semver": "^6.2.0",
+		"tape": "^4.11.0"
 	},
 	"testling": {
 		"files": "test/index.js",
