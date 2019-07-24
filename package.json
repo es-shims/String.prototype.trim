@@ -23,7 +23,7 @@
 		"tests-only": "npm run --silent test:shimmed && npm run --silent test:module",
 		"test:shimmed": "node test/shimmed.js",
 		"test:module": "node test/index.js",
-		"coverage": "covert test/*.js",
+		"coverage": "covert test/{index,shimmed}*.js",
 		"lint": "eslint ."
 	},
 	"repository": {
