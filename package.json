@@ -27,7 +27,9 @@
 		"test:shimmed": "node test/shimmed.js",
 		"test:module": "node test/index.js",
 		"coverage": "covert test/{index,shimmed}*.js",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"version": "auto-changelog && git add CHANGELOG.md",
+		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
 	},
 	"repository": {
 		"type": "git",
@@ -50,6 +52,7 @@
 	"devDependencies": {
 		"@es-shims/api": "^2.1.2",
 		"@ljharb/eslint-config": "^15.0.2",
+		"auto-changelog": "^1.16.2",
 		"covert": "^1.1.1",
 		"eslint": "^6.7.2",
 		"functions-have-names": "^1.2.0",
@@ -75,5 +78,12 @@
 	},
 	"engines": {
 		"node": ">= 0.4"
+	},
+	"auto-changelog": {
+		"output": "CHANGELOG.md",
+		"template": "keepachangelog",
+		"unreleased": false,
+		"commitLimit": false,
+		"backfillLimit": false
 	}
 }
