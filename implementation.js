@@ -1,6 +1,6 @@
 'use strict';
 
-var CheckObjectCoercible = require('es-abstract/5/CheckObjectCoercible');
+var RequireObjectCoercible = require('es-abstract/2019/RequireObjectCoercible');
 var ToString = require('es-abstract/2019/ToString');
 var callBound = require('es-abstract/helpers/callBound');
 var $replace = callBound('String.prototype.replace');
@@ -11,6 +11,6 @@ var rightWhitespace = /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u20
 /* eslint-enable no-control-regex */
 
 module.exports = function trim() {
-	var S = ToString(CheckObjectCoercible(this));
+	var S = ToString(RequireObjectCoercible(this));
 	return $replace($replace(S, leftWhitespace, ''), rightWhitespace, '');
 };

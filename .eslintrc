@@ -4,8 +4,14 @@
 	"extends": "@ljharb",
 
 	"rules": {
-		"new-cap": [2, { "capIsNewExceptions": ["CheckObjectCoercible", "ToString"] }],
-		"no-invalid-this": [1]
+		"id-length": 0,
+		"new-cap": [2, {
+			"capIsNewExceptions": [
+				"RequireObjectCoercible",
+				"ToString",
+			],
+		}],
+		"no-invalid-this": 1,
 	},
 
 	"overrides": [
