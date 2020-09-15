@@ -49,15 +49,15 @@
 	},
 	"devDependencies": {
 		"@es-shims/api": "^2.1.2",
-		"@ljharb/eslint-config": "^16.0.0",
-		"aud": "^1.1.0",
-		"auto-changelog": "^2.0.0",
-		"eslint": "^6.8.0",
+		"@ljharb/eslint-config": "^17.2.0",
+		"aud": "^1.1.2",
+		"auto-changelog": "^2.2.0",
+		"eslint": "^7.9.0",
 		"functions-have-names": "^1.2.1",
 		"has-strict-mode": "^1.0.0",
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^1.1.4",
-		"tape": "^5.0.0-next.5"
+		"tape": "^5.0.1"
 	},
 	"testling": {
 		"files": "test/index.js",
@@ -85,7 +85,8 @@
 		"template": "keepachangelog",
 		"unreleased": false,
 		"commitLimit": false,
-		"backfillLimit": false
+		"backfillLimit": false,
+		"hideCredit": true
 	},
 	"greenkeeper": {
 		"ignore": [
