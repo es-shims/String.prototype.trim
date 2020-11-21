@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.3](https://github.com/es-shims/String.prototype.trim/compare/v1.2.2...v1.2.3) - 2020-11-21
+
+### Commits
+
+- [Tests] migrate tests to Github Actions [`6768c8d`](https://github.com/es-shims/String.prototype.trim/commit/6768c8d5569a6fcc841436b98a19ddf6b63c7de4)
+- [Tests] run `nyc` on all tests [`2fd5baa`](https://github.com/es-shims/String.prototype.trim/commit/2fd5baa7239a4d449338e0333e2dc4573597962e)
+- [Deps] update `es-abstract`; use `call-bind` where applicable [`e4e8c6e`](https://github.com/es-shims/String.prototype.trim/commit/e4e8c6ede423ee8c384564092f624f980097bb28)
+- [Dev Deps] update `eslint`, `aud`, `auto-changelog` [`a21c1d5`](https://github.com/es-shims/String.prototype.trim/commit/a21c1d5c87ec9b1b5107b0a1faf138993951081c)
+
 ## [v1.2.2](https://github.com/es-shims/String.prototype.trim/compare/v1.2.1...v1.2.2) - 2020-09-15
 
 ### Commits
