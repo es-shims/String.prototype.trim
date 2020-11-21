@@ -21,12 +21,12 @@
 	"main": "index.js",
 	"scripts": {
 		"prepublish": "safe-publish-latest",
-		"pretest": "npm run --silent lint && es-shim-api --bound",
-		"test": "npm run --silent tests-only",
+		"pretest": "npm run lint",
+		"test": "npm run tests-only",
 		"posttest": "npx aud --production",
-		"tests-only": "tape 'test/*.js'",
-		"coverage": "nyc npm run tests-only",
+		"tests-only": "nyc tape 'test/**/*.js'",
 		"lint": "eslint .",
+		"postlint": "es-shim-api --bound",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
 	},
