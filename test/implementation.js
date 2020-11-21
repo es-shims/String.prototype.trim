@@ -3,7 +3,7 @@
 var trim = require('../implementation');
 var test = require('tape');
 var hasStrictMode = require('has-strict-mode')();
-var callBind = require('es-abstract/helpers/callBind');
+var callBind = require('call-bind');
 
 var runTests = require('./tests');
 
