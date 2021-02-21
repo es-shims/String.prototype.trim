@@ -7,8 +7,6 @@ String.prototype.trim <sup>[![Version Badge][npm-version-svg]][package-url]</sup
 
 [![npm badge][npm-badge-png]][package-url]
 
-[![browser support][testling-svg]][testling-url]
-
 An ES5 spec-compliant `String.prototype.trim` shim. Invoke its "shim" method to shim `String.prototype.trim` if it is unavailable.
 
 This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the spec (both [ES5](https://262.ecma-international.org/5.1/#sec-15.5.4.20) and [current](https://tc39.es/ecma262/#sec-string.prototype.trim)).
@@ -38,9 +36,6 @@ Simply clone the repo, `npm install`, and run `npm test`
 [deps-url]: https://david-dm.org/es-shims/String.prototype.trim
 [dev-deps-svg]: https://david-dm.org/es-shims/String.prototype.trim/dev-status.svg
 [dev-deps-url]: https://david-dm.org/es-shims/String.prototype.trim#info=devDependencies
-[testling-svg]: https://ci.testling.com/es-shims/String.prototype.trim.png
-[testling-url]: https://ci.testling.com/es-shims/String.prototype.trim
-[npm-badge-png]: https://nodei.co/npm/string.prototype.trim.png?downloads=true&stars=true
 [license-image]: https://img.shields.io/npm/l/string.prototype.trim.svg
 [license-url]: LICENSE
 [downloads-image]: https://img.shields.io/npm/dm/string.prototype.trim.svg
