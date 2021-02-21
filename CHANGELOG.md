@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.4](https://github.com/es-shims/String.prototype.trim/compare/v1.2.3...v1.2.4) - 2021-02-21
+
+### Commits
+
+- [meta] do not publish github action workflow files [`936161b`](https://github.com/es-shims/String.prototype.trim/commit/936161bf43c83e09bc39c4d472d313c8f64e3fe3)
+- [readme] remove travis badge [`9a28c39`](https://github.com/es-shims/String.prototype.trim/commit/9a28c3943b51a2cc87694c954205249122256d92)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `functions-have-names`, `has-strict-mode`, `tape` [`7b4be8d`](https://github.com/es-shims/String.prototype.trim/commit/7b4be8d12365feb5b42658902cf18316508a0c62)
+- [Tests] increase coverage [`31b8735`](https://github.com/es-shims/String.prototype.trim/commit/31b87354f55f24501ca8b2f02477cb692a70457c)
+- [actions] update workflows [`eda6ab7`](https://github.com/es-shims/String.prototype.trim/commit/eda6ab73fea52b49b74653e96ac81d5372599dc8)
+- [Deps] update `call-bind`, `es-abstract` [`083f88f`](https://github.com/es-shims/String.prototype.trim/commit/083f88f5342144f337f1f82874cb8cd6f27f2262)
+
 ## [v1.2.3](https://github.com/es-shims/String.prototype.trim/compare/v1.2.2...v1.2.3) - 2020-11-21
 
 ### Commits
