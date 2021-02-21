@@ -1,7 +1,6 @@
 'use strict';
 
-var trim = require('../');
-trim.shim();
+require('../auto');
 
 var test = require('tape');
 var defineProperties = require('define-properties');
@@ -26,8 +25,8 @@ test('shimmed', function (t) {
 	var supportsStrictMode = (function () { return typeof this === 'undefined'; }());
 
 	t.test('bad string/this value', { skip: !supportsStrictMode }, function (st) {
-		st['throws'](function () { return trim(undefined, 'a'); }, TypeError, 'undefined is not an object');
-		st['throws'](function () { return trim(null, 'a'); }, TypeError, 'null is not an object');
+		st['throws'](function () { return String.prototype.trim.call(undefined, 'a'); }, TypeError, 'undefined is not an object');
+		st['throws'](function () { return String.prototype.trim.call(null, 'a'); }, TypeError, 'null is not an object');
 		st.end();
 	});
 
