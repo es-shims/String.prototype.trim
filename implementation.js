@@ -1,7 +1,7 @@
 'use strict';
 
-var RequireObjectCoercible = require('es-abstract/2020/RequireObjectCoercible');
-var ToString = require('es-abstract/2020/ToString');
+var RequireObjectCoercible = require('es-abstract/2021/RequireObjectCoercible');
+var ToString = require('es-abstract/2021/ToString');
 var callBound = require('call-bind/callBound');
 var $replace = callBound('String.prototype.replace');
 
