@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.5](https://github.com/es-shims/String.prototype.trim/compare/v1.2.4...v1.2.5) - 2021-10-03
+
+### Commits
+
+- [actions] use `node/install` instead of `node/run`; use `codecov` action [`37d5a61`](https://github.com/es-shims/String.prototype.trim/commit/37d5a61c95a26c079b30e2d9d2ffdb70f36ca9cf)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `@es-shims/api`, `aud`, `auto-changelog`, `tape` [`4c4a85e`](https://github.com/es-shims/String.prototype.trim/commit/4c4a85e5f521ae9811ac1205af933e3845b5a24e)
+- [readme] add github actions/codecov badges [`9980eee`](https://github.com/es-shims/String.prototype.trim/commit/9980eee58866b08218ff3257a3af2aa9e29774fc)
+- [Deps] update `es-abstract` [`6c1da80`](https://github.com/es-shims/String.prototype.trim/commit/6c1da806270fd909a76fc43e3dfe91be46058382)
+- [readme] remove defunct testling badge [`8d282d1`](https://github.com/es-shims/String.prototype.trim/commit/8d282d1becd5f8d3ffe0e6e1dbfa2ddf29071670)
+- [Dev Deps] update `eslint`, `tape` [`8856c26`](https://github.com/es-shims/String.prototype.trim/commit/8856c2663b5495cafb930e009f68e2d22958cac0)
+- [actions] update workflows [`62cd341`](https://github.com/es-shims/String.prototype.trim/commit/62cd3412aaeee13c0d2cfe7f9bd33297e7279989)
+- [meta] use `prepublishOnly` script for npm 7+ [`abd99c4`](https://github.com/es-shims/String.prototype.trim/commit/abd99c4a9838847efb3db7ddf579fb4bda8f6030)
+- [Deps] update `es-abstract` [`802cb7b`](https://github.com/es-shims/String.prototype.trim/commit/802cb7b69b3a0c9a9b9642d641f0af490bd9dde7)
+
 ## [v1.2.4](https://github.com/es-shims/String.prototype.trim/compare/v1.2.3...v1.2.4) - 2021-02-21
 
 ### Commits
