@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.8](https://github.com/es-shims/String.prototype.trim/compare/v1.2.7...v1.2.8) - 2022-11-07
+
+## [v1.2.7](https://github.com/es-shims/String.prototype.trim/compare/v1.2.6...v1.2.7) - 2022-11-07
+
+### Commits
+
+- [meta] use `npmignore` to autogenerate an npmignore file [`3e6de84`](https://github.com/es-shims/String.prototype.trim/commit/3e6de84f959c1ecc44e894aa1a64a8eb5007f3f5)
+- [actions] update rebase action to use reusable workflow [`b725a04`](https://github.com/es-shims/String.prototype.trim/commit/b725a0499b832e69dfe5121bb643464a659ba8ff)
+- [Deps] update `es-abstract` [`b707a17`](https://github.com/es-shims/String.prototype.trim/commit/b707a1747363f361665c50eda5eb952a86755e8c)
+- [Dev Deps] update `aud`, `tape` [`5295419`](https://github.com/es-shims/String.prototype.trim/commit/5295419b0bbaf8035696ef3a24a8625ee743ec7f)
+
 ## [v1.2.6](https://github.com/es-shims/String.prototype.trim/compare/v1.2.5...v1.2.6) - 2022-04-24
 
 ### Commits
