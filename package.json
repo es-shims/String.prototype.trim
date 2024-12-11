@@ -1,6 +1,6 @@
 {
 	"name": "string.prototype.trim",
-	"version": "1.2.9",
+	"version": "1.2.10",
 	"author": {
 		"name": "Jordan Harband",
 		"email": "ljharb@gmail.com",
