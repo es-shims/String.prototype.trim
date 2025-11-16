@@ -1,16 +1,39 @@
 'use strict';
 
 var forEach = require('for-each');
+var repeat = require('string.prototype.repeat');
 
 module.exports = function (trim, t) {
 	t.test('normal cases', function (st) {
 		st.equal(trim(' \t\na \t\n'), 'a', 'strips whitespace off left and right sides');
 		st.equal(trim('a'), 'a', 'noop when no whitespace');
+		st.equal(trim(' a'), 'a', 'strips whitespace off left side only');
+		st.equal(trim('a '), 'a', 'strips whitespace off right side only');
 
 		var allWhitespaceChars = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF';
 		st.equal(trim(allWhitespaceChars + 'a' + allWhitespaceChars), 'a', 'all expected whitespace chars are trimmed');
 
 		st.end();
+	});
+
+	t.test('pathological case', function (st) {
+		var timeout = 500;
+		var t1, t2;
+
+		var input = 'A' + repeat(' ', 100000) + 'A';
+
+		t1 = setTimeout(function () {
+			clearTimeout(t2);
+			st.fail('Test timed out after ' + timeout + 'ms');
+			st.end();
+		}, timeout);
+
+		st.equal(trim(input), input);
+
+		t2 = setTimeout(function () {
+			clearTimeout(t1);
+			st.end();
+		}, 0);
 	});
 
 	// see https://codeblog.jonskeet.uk/2014/12/01/when-is-an-identifier-not-an-identifier-attack-of-the-mongolian-vowel-separator/
