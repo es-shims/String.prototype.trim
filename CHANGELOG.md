@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.11](https://github.com/es-shims/String.prototype.trim/compare/v1.2.10...v1.2.11) - 2026-06-05
+
+### Commits
+
+- [Fix] make right-trim linear for all inputs, not just non-trailing-whitespace [`2c66b5e`](https://github.com/es-shims/String.prototype.trim/commit/2c66b5e9f102e872873877f2bbf1bd3f70a7ad12)
+- [Refactor] Handle pathological strings better [`91e5eb6`](https://github.com/es-shims/String.prototype.trim/commit/91e5eb62998a7ea8d4e25c96b55c2dd709a9b21f)
+- [actions] update workflows [`09b9c7d`](https://github.com/es-shims/String.prototype.trim/commit/09b9c7d8efbb08607f60fa117671ae9eda45bff8)
+- [Dev Deps] update `@ericcornelissen/assert-time`, `@ljharb/eslint-config`, `auto-changelog`, `eslint`, `for-each`, `has-strict-mode`, `npmignore` [`816817a`](https://github.com/es-shims/String.prototype.trim/commit/816817a5aa1bfbc5ec994be5de6ec28cf4efa48b)
+- [Deps] update `call-bind`, `call-bound`, `es-abstract`, `es-object-atoms` [`733f19d`](https://github.com/es-shims/String.prototype.trim/commit/733f19d4aa049db208e209e94107a81008bd2e0c)
+- [readme] remove dead badges [`738a1e6`](https://github.com/es-shims/String.prototype.trim/commit/738a1e6451b80df057b86de43842bf5407b3ce5b)
+- [readme] replace runkit CI badge with shields.io check-runs badge [`3c6a604`](https://github.com/es-shims/String.prototype.trim/commit/3c6a6045bbeb90fb90e41e69c89a5568f39f5418)
+
 ## [v1.2.10](https://github.com/es-shims/String.prototype.trim/compare/v1.2.9...v1.2.10) - 2024-12-11
 
 ### Commits
