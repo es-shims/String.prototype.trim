@@ -29,6 +29,20 @@ module.exports = function (trim, t) {
 		st.end();
 	});
 
+	t.test('pathological case with trailing whitespace', function (st) {
+		var input = 'A' + repeat(' ', 100000) + 'A' + repeat(' ', 100000);
+
+		st.equal(trim(input), 'A' + repeat(' ', 100000) + 'A', 'trailing whitespace is trimmed, internal whitespace is preserved');
+
+		st.doesNotThrow(function () {
+			assertTime(function () {
+				trim(input);
+			}, 500);
+		});
+
+		st.end();
+	});
+
 	// see https://codeblog.jonskeet.uk/2014/12/01/when-is-an-identifier-not-an-identifier-attack-of-the-mongolian-vowel-separator/
 	var mongolianVowelSeparator = '\u180E';
 	var mvsIsWS = (/^\s$/).test('\u180E');
