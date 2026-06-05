@@ -1,9 +1,10 @@
 'use strict';
 
 var RequireObjectCoercible = require('es-object-atoms/RequireObjectCoercible');
-var ToString = require('es-abstract/2024/ToString');
+var ToString = require('es-abstract/2025/ToString');
 var callBound = require('call-bound');
 var safeRegexTester = require('safe-regex-test');
+
 var $replace = callBound('String.prototype.replace');
 var $charAt = callBound('String.prototype.charAt');
 var $slice = callBound('String.prototype.slice');
