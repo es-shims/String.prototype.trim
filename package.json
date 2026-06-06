@@ -102,7 +102,10 @@
 	},
 	"publishConfig": {
 		"ignore": [
-			".github/workflows"
+			".github/workflows",
+			"test",
+			".eslintrc",
+			".nycrc"
 		]
 	}
 }
